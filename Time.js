@@ -1,0 +1,14 @@
+
+function showTime()
+{
+    const date = new Date();
+    return date.getHours()+"Hrs" + " " + date.getMinutes()+"Min" +" "+ date.getSeconds()+"Sec";
+}
+
+function showSessionExpire() {
+    console.log("Its Activity B Your session is expired at "+ showTime());
+    
+}
+console.log("Activity-A: Trigerring Activity-B at " + showTime());
+setTimeout(showSessionExpire, 5000);
+console.log("Activity-A: Triggered Activity-B at " + showTime()+" will execute after 5 seconds");
