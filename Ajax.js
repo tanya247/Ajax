@@ -21,7 +21,12 @@ function makeAjaxCall(methodType,url,callback,async=true,data=null){
 
     }
     xhr.open(methodType,url,async);
-    xhr.send();
+    if(data){
+        console.log(JSON.stringify(data));
+        xhr.setRequestHeader("Content-Type","application/json");
+        xhr.send(JSON.stringify(data))
+    }
+    else xhr.send();
     console.log("request send to the server"+showTime());
 
 }
@@ -30,3 +35,9 @@ function getUserData(data){
     console.log("user data: "+data);
 }
 makeAjaxCall("GET",getURL, getUserData, true);
+const pushURL = "http://localhost:3000/AddressBook/";
+const addressbookdata = {"firstName": "Pranshu","lastName": "Kumar","address": "Kannauj","city": "Kanpur","state":"UP","zip": "245524","phoneNo": "98754788777","email": "xyGabxt@gmail.com"};
+function pushUserData(data){
+    console.log("user data "+data)
+}
+makeAjaxCall("POST", pushURL, pushUserData, true, addressbookdata);
