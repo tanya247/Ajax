@@ -1,0 +1,25 @@
+{
+    "AddressBook":[
+        {
+            "firstName":"Tanya",
+            "lastName":"Kansal",
+            "address":"Chandi Mandir",
+            "city":"Hapur",
+            "state":"UP",
+            "zip":245101,
+            "phoneNo":"9874568547",
+            "email":"xyz@gmail.com"
+        },
+        {
+            "firstName":"Prashant",
+            "lastName":"Kumar",
+            "address":"Kannauj",
+            "city":"Kanpur",
+            "state":"UP",
+            "zip":245524,
+            "phoneNo":"98754788777",
+            "email":"xyabxt@gmail.com"
+        }
+    ]
+}    
+
